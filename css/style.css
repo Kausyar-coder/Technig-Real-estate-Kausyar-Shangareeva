@@ -5,6 +5,7 @@
 :root {
   --color-primary-light: #f2f3ef;
   --color-primary: #8d9271;
+  --color-primary-2: #8d92;
   --color-white: #ffffff;
   --color-white-base: #ffffff;
   --color-grey-light-1: #f8f9fa;
@@ -30,7 +31,7 @@
 /* ------------------------------------------------------
   | THEME VARIABLES: dark mode 🌙
   ------------------------------------------------------ */
-:root[data-theme=dark] {
+:root[data-theme="dark"] {
   --color-primary-light: #252525;
   --color-primary: #8d9271;
   --color-white: #424242;
@@ -366,13 +367,15 @@ body.loaded {
     gap: 0.5rem;
   }
 }
-.choose-option__filter-methods, .choose-option__filter-cities {
+.choose-option__filter-methods,
+.choose-option__filter-cities {
   display: flex;
   gap: 1rem;
   flex: auto;
 }
 @media only screen and (max-width: 20em) {
-  .choose-option__filter-methods, .choose-option__filter-cities {
+  .choose-option__filter-methods,
+  .choose-option__filter-cities {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -383,12 +386,14 @@ body.loaded {
     margin: 0 -1rem;
   }
 }
-.choose-option__btn-invest, .choose-option__btn-city {
+.choose-option__btn-invest,
+.choose-option__btn-city {
   flex: 1;
   cursor: pointer;
 }
 @media only screen and (max-width: 20em) {
-  .choose-option__btn-invest, .choose-option__btn-city {
+  .choose-option__btn-invest,
+  .choose-option__btn-city {
     flex: 0 0 auto;
     white-space: nowrap;
   }
@@ -851,7 +856,8 @@ body.loaded {
   fill: var(--color-grey-light-3);
   transition: 0.3s ease;
 }
-.card-button-heart:hover .card-button-heart__icon, .card-button-heart.active .card-button-heart__icon {
+.card-button-heart:hover .card-button-heart__icon,
+.card-button-heart.active .card-button-heart__icon {
   fill: var(--color-primary);
 }
 
@@ -1145,7 +1151,8 @@ header {
 .header-menue__item {
   list-style: none;
 }
-.header-menue__link:link, .header-menue__link:visited {
+.header-menue__link:link,
+.header-menue__link:visited {
   text-decoration: none;
   color: currentColor;
   display: inline-flex;
@@ -1154,7 +1161,8 @@ header {
   gap: 0.7rem;
   transition: 0.2s;
 }
-.header-menue__link:hover, .header-menue__link:active {
+.header-menue__link:hover,
+.header-menue__link:active {
   color: var(--color-primary);
 }
 .header-menue__button {
@@ -1195,7 +1203,8 @@ header {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-9.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/hero-9.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
