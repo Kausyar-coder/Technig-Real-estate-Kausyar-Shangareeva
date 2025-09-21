@@ -54,7 +54,7 @@
 // FILTER BUTTON
 
 @mixin btn--choose {
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-primary-light);
   padding: 1.5rem 2rem;
   color: var(--color-grey-dark-base);
   border: none;
@@ -64,6 +64,7 @@
   border: 0.1rem solid var(--color-primary);
 
   @include respond(xs-phone) {
+    padding: 2rem 2rem;
     font-size: 1.6rem;
   }
 

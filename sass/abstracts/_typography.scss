@@ -23,8 +23,8 @@ body {
     font-size: 4rem;
   }
 
-  @include respond-max(27.5em) {
-    // от 440px и нижу
+  @include respond-max(31.25em) {
+    // от 500px и нижу
     font-size: 3rem;
   }
 
@@ -94,8 +94,8 @@ body {
     margin-bottom: 10rem;
   }
 
-  @include respond-max(27.5em) {
-    // от 440px и нижу
+  @include respond-max(31.25em) {
+    // от 500px и нижу
     font-size: 2rem;
     margin-bottom: 6rem;
   }

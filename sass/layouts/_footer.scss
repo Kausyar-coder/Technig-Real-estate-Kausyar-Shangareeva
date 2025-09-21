@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .footer-menue {
-  padding: 1rem 0;
+  padding: 3rem 0;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
   margin-top: 10rem;
@@ -13,17 +13,20 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 2rem;
+    gap: 3rem;
     padding: 0 2rem;
 
     @include respond(phone) {
       padding: 1rem;
-      gap: 1rem;
     }
 
-    @include respond-max(27.5em) {
-      padding: 0;
+    @include respond-max(35em) {
+      padding: 0 2rem;
       flex-direction: column;
+    }
+
+    @include respond(xs-phone) {
+      padding: 0 0.5rem;
     }
   }
 
@@ -35,18 +38,15 @@
     gap: 2rem;
     align-self: stretch;
     flex: 0 0 20%;
-
-    @include respond(phone) {
-      gap: 1rem;
-    }
   }
 
   &__social-media {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
+    gap: 1.5rem;
   }
 
   &__adress {
@@ -58,6 +58,20 @@
     padding: 2rem;
     width: 100%;
     flex: 1;
+
+    &__sub-title-main {
+      font-size: 1.4rem;
+      color: var(--color-grey-dark);
+    }
+
+    &__sub-title {
+      margin-bottom: 2rem;
+    }
+
+    &__number {
+      color: var(--color-font);
+      text-decoration: none;
+    }
   }
 
   &__question {
@@ -83,9 +97,13 @@
     padding: 2rem;
     flex: 1;
 
+    @include respond-max(49.375em) {
+      flex-wrap: wrap;
+    }
+
     @include respond(phone) {
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 3rem;
     }
   }
 

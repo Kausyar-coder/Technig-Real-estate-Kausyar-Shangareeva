@@ -24,8 +24,8 @@
     padding: 2rem;
   }
 
-  @include respond-max(27.5em) {
-    // от 440px и нижу
+  @include respond-max(31.25em) {
+    // от 500px и нижу
     grid-template-columns: 1fr;
     margin: 0 1rem;
   }

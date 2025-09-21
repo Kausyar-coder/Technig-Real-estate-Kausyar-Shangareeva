@@ -24,7 +24,8 @@
   --border-radius-md: 2rem;
   --border-radius-lg: 2.5rem;
   --border-radius-xl: 3rem;
-  --box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.07);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  --box-shadow-green: 0 0.5rem 1rem #8d92717d;
 }
 
 /* ------------------------------------------------------
@@ -127,7 +128,7 @@ body {
     font-size: 4rem;
   }
 }
-@media (max-width: 27.5em) {
+@media (max-width: 31.25em) {
   .primary-heading {
     font-size: 3rem;
   }
@@ -197,7 +198,7 @@ body {
     margin-bottom: 10rem;
   }
 }
-@media (max-width: 27.5em) {
+@media (max-width: 31.25em) {
   .tertiary-headin {
     font-size: 2rem;
     margin-bottom: 6rem;
@@ -241,7 +242,7 @@ html {
 }
 @media only screen and (max-width: 56.25em) {
   html {
-    font-size: 50%;
+    font-size: 56.25%;
   }
 }
 @media only screen and (max-width: 20em) {
@@ -253,6 +254,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: var(--color-primary-light);
+  height: 1000rem;
 }
 
 body {
@@ -326,7 +328,7 @@ body.loaded {
 }
 
 .btn-choose {
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-primary-light);
   padding: 1.5rem 2rem;
   color: var(--color-grey-dark-base);
   border: none;
@@ -337,6 +339,7 @@ body.loaded {
 }
 @media only screen and (max-width: 20em) {
   .btn-choose {
+    padding: 2rem 2rem;
     font-size: 1.6rem;
   }
 }
@@ -376,7 +379,7 @@ body.loaded {
 .choose-option {
   background-color: var(--color-white);
   padding: 1rem;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-md);
   display: flex;
   gap: 1rem;
   border: 0.1rem solid var(--color-primary);
@@ -440,7 +443,7 @@ body.loaded {
     padding: 2rem;
   }
 }
-@media (max-width: 27.5em) {
+@media (max-width: 31.25em) {
   .search-form {
     grid-template-columns: 1fr;
     margin: 0 1rem;
@@ -545,10 +548,21 @@ body.loaded {
     min-height: 60rem;
   }
 }
+@media (max-width: 68.75em) {
+  .section-invest__container__card {
+    overflow-x: auto; /* разрешаем горизонтальный скролл */
+    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+    scroll-snap-type: x mandatory; /* оставляем прилипающий скролл */
+    padding: 0 1rem;
+    scroll-padding: 0 1rem;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+  }
+}
 @media only screen and (max-width: 56.25em) {
   .section-invest__container__card {
     gap: 2rem;
-    min-height: 58rem;
+    min-height: 57rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -556,11 +570,11 @@ body.loaded {
     overflow-x: auto; /* разрешаем горизонтальный скролл */
     -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
     scroll-snap-type: x mandatory; /* оставляем прилипающий скролл */
-    height: 61rem;
     padding: 0 1rem;
     scroll-padding: 0 1rem;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE и Edge */
+    height: 61rem;
   }
 }
 .section-invest__card {
@@ -573,14 +587,14 @@ body.loaded {
   border-radius: var(--border-radius-md);
   overflow: hidden;
 }
+@media only screen and (max-width: 56.25em) {
+  .section-invest__card {
+    flex: 0 0 43rem; /* 2 карточки видны */
+  }
+}
 @media (max-width: 68.75em) {
   .section-invest__card {
     flex: 0 0 49rem; /* 2 карточки видны */
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .section-invest__card {
-    flex: 0 0 44rem; /* 2 карточки видны */
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -731,7 +745,7 @@ body.loaded {
 .developer__logo-box {
   height: 4.6rem;
   width: 9rem;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-xs);
   border: 0.1rem solid var(--color-font);
   padding: 1rem;
   background-color: var(--color-white-base);
@@ -857,10 +871,10 @@ body.loaded {
 }
 
 .grey-card-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: 1rem;
-  fill: var(--color-grey-dark);
+  color: var(--color-grey-dark);
 }
 
 .arrow-icon {
@@ -878,7 +892,7 @@ body.loaded {
   align-items: center;
   justify-content: center;
 }
-@media only screen and (max-width: 20em) {
+@media (max-width: 30.9375em) {
   .social-media {
     height: 6rem;
     width: 6rem;
@@ -889,7 +903,7 @@ body.loaded {
   width: 2.5rem;
   fill: var(--color-white-base);
 }
-@media only screen and (max-width: 20em) {
+@media (max-width: 30.9375em) {
   .social-media__icon {
     height: 3rem;
     width: 3rem;
@@ -915,7 +929,7 @@ body.loaded {
 }
 
 .footer-menue {
-  padding: 1rem 0;
+  padding: 3rem 0;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
   margin-top: 10rem;
@@ -926,19 +940,23 @@ body.loaded {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 2rem;
+  gap: 3rem;
   padding: 0 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .footer-menue__container {
     padding: 1rem;
-    gap: 1rem;
   }
 }
-@media (max-width: 27.5em) {
+@media (max-width: 35em) {
   .footer-menue__container {
-    padding: 0;
+    padding: 0 2rem;
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 20em) {
+  .footer-menue__container {
+    padding: 0 0.5rem;
   }
 }
 .footer-menue__contact {
@@ -950,17 +968,13 @@ body.loaded {
   align-self: stretch;
   flex: 0 0 20%;
 }
-@media only screen and (max-width: 37.5em) {
-  .footer-menue__contact {
-    gap: 1rem;
-  }
-}
 .footer-menue__social-media {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+  gap: 1.5rem;
 }
 .footer-menue__adress {
   display: flex;
@@ -971,6 +985,17 @@ body.loaded {
   padding: 2rem;
   width: 100%;
   flex: 1;
+}
+.footer-menue__adress__sub-title-main {
+  font-size: 1.4rem;
+  color: var(--color-grey-dark);
+}
+.footer-menue__adress__sub-title {
+  margin-bottom: 2rem;
+}
+.footer-menue__adress__number {
+  color: var(--color-font);
+  text-decoration: none;
 }
 .footer-menue__question {
   display: flex;
@@ -993,10 +1018,15 @@ body.loaded {
   padding: 2rem;
   flex: 1;
 }
+@media (max-width: 49.375em) {
+  .footer-menue__navigation-bar {
+    flex-wrap: wrap;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .footer-menue__navigation-bar {
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
   }
 }
 .footer-menue__nav-box-1 {
@@ -1279,7 +1309,6 @@ header {
   border-radius: 50%;
   border: 6px solid var(--color-white);
   cursor: pointer;
-  margin: 2rem;
 }
 @media (max-width: 68.75em) {
   .section-invest__arrow {

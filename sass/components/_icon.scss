@@ -87,10 +87,10 @@
 }
 
 .grey-card-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: 1rem;
-  fill: var(--color-grey-dark);
+  color: var(--color-grey-dark);
 }
 
 .arrow-icon {
@@ -110,7 +110,7 @@
   align-items: center;
   justify-content: center;
 
-  @include respond(xs-phone) {
+  @include respond-max(30.9375em) {
     height: 6rem;
     width: 6rem;
   }
@@ -120,7 +120,7 @@
     width: 2.5rem;
     fill: var(--color-white-base);
 
-    @include respond(xs-phone) {
+    @include respond-max(30.9375em) {
       height: 3rem;
       width: 3rem;
     }

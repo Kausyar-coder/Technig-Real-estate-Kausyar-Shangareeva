@@ -78,7 +78,6 @@
     border-radius: 50%;
     border: 6px solid var(--color-white);
     cursor: pointer;
-    margin: 2rem;
 
     @include respond-max(68.75em) {
       display: none;
