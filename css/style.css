@@ -253,7 +253,6 @@ html {
 body {
   box-sizing: border-box;
   background-color: var(--color-primary-light);
-  height: 1000rem;
 }
 
 body {
@@ -957,7 +956,6 @@ body.loaded {
   }
 }
 .footer-menue__social-media {
-  background-color: lime;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, auto);
