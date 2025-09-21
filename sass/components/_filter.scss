@@ -16,7 +16,6 @@
   @include respond(phone) {
     background-color: transparent;
     border: transparent;
-    padding: 0;
   }
 
   &__filter-methods,

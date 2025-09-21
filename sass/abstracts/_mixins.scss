@@ -60,7 +60,6 @@
   border: none;
   border-radius: var(--border-radius-xs);
   font-size: 1.8rem;
-  font-weight: 100;
   border: 0.1rem solid var(--color-primary);
 
   @include respond(xs-phone) {

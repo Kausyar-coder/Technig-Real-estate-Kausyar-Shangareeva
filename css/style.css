@@ -334,7 +334,6 @@ body.loaded {
   border: none;
   border-radius: var(--border-radius-xs);
   font-size: 1.8rem;
-  font-weight: 100;
   border: 0.1rem solid var(--color-primary);
 }
 @media only screen and (max-width: 20em) {
@@ -389,7 +388,6 @@ body.loaded {
   .choose-option {
     background-color: transparent;
     border: transparent;
-    padding: 0;
   }
 }
 .choose-option__filter-methods, .choose-option__filter-cities {
