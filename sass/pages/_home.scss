@@ -2,30 +2,44 @@
 @use "../abstracts/mixins" as *;
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../img/hero-9.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 69rem;
-  border-radius: var(--border-radius-lg);
-  position: relative;
-  padding: 1rem;
-
   margin-bottom: $gutter-horizontal-big;
-
-  @include respond(tab-land) {
-    height: 60rem;
-    margin-bottom: $gutter-horizontal-medium;
-  }
+  padding: 0 2rem;
 
   @include respond(phone) {
-    height: 55rem;
+    margin-bottom: $gutter-horizontal-medium;
+    padding: 0 1rem;
   }
 
   @include respond(xs-phone) {
-    height: 50rem;
-    margin-bottom: $gutter-horizontal-small;
+    padding: 0 1px;
+  }
+
+  &__img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../img/hero-9.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 69rem;
+    border-radius: var(--border-radius-lg);
+    position: relative;
+
+    @include respond(tab-land) {
+      height: 60rem;
+    }
+
+    @include respond(phone) {
+      height: 55rem;
+    }
+
+    @include respond-max(27.5em) {
+      // от 440px и нижу
+      height: 60rem;
+    }
+
+    @include respond(xs-phone) {
+      height: 55rem;
+    }
   }
 
   &__container {
@@ -34,7 +48,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-bottom: $gutter-horizontal-big;
   }
 }
 
@@ -65,8 +78,9 @@
     border-radius: 50%;
     border: 6px solid var(--color-white);
     cursor: pointer;
+    margin: 2rem;
 
-    @include respond(phone) {
+    @include respond-max(68.75em) {
       display: none;
     }
   }

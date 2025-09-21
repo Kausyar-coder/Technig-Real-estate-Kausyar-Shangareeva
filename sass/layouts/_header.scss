@@ -21,6 +21,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
+
+    @include respond(phone) {
+      padding: 0 1rem;
+    }
+
+    @include respond(xs-phone) {
+      padding: 0 0.5rem;
+    }
   }
 
   &__logo {

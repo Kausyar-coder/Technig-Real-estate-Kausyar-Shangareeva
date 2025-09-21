@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .footer-menue {
-  padding: 3rem 0;
+  padding: 1rem 0;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
   margin-top: 10rem;
@@ -12,10 +12,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
     width: 100%;
+    gap: 2rem;
+    padding: 0 2rem;
 
-    @include respond(xs-phone) {
+    @include respond(phone) {
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    @include respond-max(27.5em) {
+      padding: 0;
       flex-direction: column;
     }
   }
@@ -27,14 +34,20 @@
     justify-content: center;
     gap: 2rem;
     align-self: stretch;
-    flex: 1;
+    flex: 0 0 20%;
+
+    @include respond(phone) {
+      gap: 1rem;
+    }
   }
 
   &__social-media {
+    background-color: lime;
     margin-top: 2rem;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     justify-content: space-between;
+    align-items: center;
   }
 
   &__adress {
@@ -59,33 +72,37 @@
 
   &__btn {
     width: 100%;
+    white-space: nowrap;
   }
 
   &__navigation-bar {
     display: flex;
     align-self: stretch;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: var(--border-radius-lg);
     background-color: var(--color-primary-light);
-    flex: 0 0 78%;
     padding: 2rem;
+    flex: 1;
 
     @include respond(phone) {
       flex-wrap: wrap;
-      flex: 1;
+      gap: 2rem;
     }
   }
 
   &__nav-box-1 {
     flex: 1;
+    white-space: nowrap;
   }
 
   &__nav-box-2 {
     flex: 1;
+    white-space: nowrap;
   }
 
   &__nav-box-3 {
     flex: 1;
+    white-space: nowrap;
   }
 
   &__title {

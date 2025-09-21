@@ -3,65 +3,41 @@
 
 .search-form {
   background-color: var(--color-white);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   align-items: center;
-  padding: 4rem;
+  padding: 3rem;
   gap: 1rem;
   border-radius: var(--border-radius-xl);
   border: 0.1rem solid var(--color-primary);
+  flex-wrap: wrap;
+  margin: 0 4rem;
 
-  @include respond-between(37.5em, 42.625em) {
-    // от 601px до 682px
-    flex-wrap: wrap;
-    border-radius: var(--border-radius-md);
-    padding: 2rem;
+  @include respond-max(49.375em) {
+    // от 790px и нижу
+    grid-template-columns: repeat(2, auto);
   }
 
   @include respond(phone) {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, auto);
     border-radius: var(--border-radius-md);
     padding: 2rem;
   }
 
+  @include respond-max(27.5em) {
+    // от 440px и нижу
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+  }
+
   @include respond(xs-phone) {
-    padding: 1rem;
+    margin: 1px;
   }
 
   &__group {
     display: flex;
     flex-direction: column;
-    flex: 1;
     position: relative;
-
-    @include respond-between(37.5em, 42.625em) {
-      // от 601px до 682px
-      flex: 49%;
-    }
-
-    @include respond(phone) {
-      flex: 0 0 49%;
-    }
-
-    @include respond(xs-phone) {
-      flex: 100%;
-    }
-  }
-
-  &__group--1 {
-    flex: 0 0 30%;
-
-    @include respond-between(37.5em, 42.625em) {
-      // от 601px до 682px
-      flex: 0 0 49%;
-    }
-
-    @include respond(phone) {
-      flex: 0 0 49%;
-    }
-
-    @include respond(xs-phone) {
-      flex: 100%;
-    }
   }
 
   &__select {

@@ -13,8 +13,10 @@
   border: 0.1rem solid var(--color-primary);
   flex-wrap: wrap;
 
-  @include respond(xs-phone) {
-    gap: 0.5rem;
+  @include respond(phone) {
+    background-color: transparent;
+    border: transparent;
+    padding: 0;
   }
 
   &__filter-methods,
@@ -23,15 +25,14 @@
     gap: 1rem;
     flex: auto;
 
-    @include respond(xs-phone) {
+    @include respond(phone) {
       flex-wrap: nowrap; // обязательно — не переносить
       overflow-x: auto; // горизонтальный скролл
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch; // плавный скролл на iOS
       scrollbar-width: none; // Firefox
       -ms-overflow-style: none; // IE/Edge
-      padding: 0.5rem 1rem; // отступы слева/справа, чтобы кнопки не прилипали к краям
-      margin: 0 -1rem;
+      padding: 0 1rem; // отступы слева/справа, чтобы кнопки не прилипали к краям
     }
   }
 
@@ -40,7 +41,7 @@
     flex: 1;
     cursor: pointer;
 
-    @include respond(xs-phone) {
+    @include respond-max(36.875em) {
       flex: 0 0 auto; // на мобиле кнопки по содержимому
       white-space: nowrap; // текст в кнопке не переносится
     }

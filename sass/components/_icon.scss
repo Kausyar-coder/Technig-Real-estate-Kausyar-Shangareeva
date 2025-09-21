@@ -99,10 +99,12 @@
   fill: var(--color-white-base);
 }
 
+// -----  SOCIAL MEDIA ICONS FOOTER  ----//
+
 .social-media {
   height: 4rem;
   width: 4rem;
-  background-color: var(--color-font);
+  background-color: var(--color-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -116,7 +118,7 @@
   &__icon {
     height: 2.5rem;
     width: 2.5rem;
-    fill: var(--color-white);
+    fill: var(--color-white-base);
 
     @include respond(xs-phone) {
       height: 3rem;

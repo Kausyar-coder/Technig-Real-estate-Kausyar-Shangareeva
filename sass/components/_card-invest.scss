@@ -10,20 +10,7 @@
     scroll-behavior: smooth; /* плавный скролл */
     scroll-snap-type: x mandatory; /* включаем привязку к слайдам */
     overflow: hidden;
-
     min-height: 63rem; /* высота карточки */
-
-    @include respond(phone) {
-      overflow-x: auto; /* разрешаем горизонтальный скролл */
-
-      -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
-      scroll-snap-type: x mandatory; /* оставляем прилипающий скролл */
-
-      height: 61rem;
-      /* скрываем ползунок */
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE и Edge */
-    }
 
     @include respond(tab-land) {
       min-height: 60rem;
@@ -32,6 +19,17 @@
     @include respond(tab-port) {
       gap: 2rem;
       min-height: 58rem;
+    }
+
+    @include respond(phone) {
+      overflow-x: auto; /* разрешаем горизонтальный скролл */
+      -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+      scroll-snap-type: x mandatory; /* оставляем прилипающий скролл */
+      height: 61rem;
+      padding: 0 1rem; // отступы слева/справа, чтобы кнопки не прилипали к краям
+      scroll-padding: 0 1rem; // скролл учитывает паддинг
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE и Edge */
     }
   }
 
@@ -44,6 +42,10 @@
     border: 0.1rem solid var(--color-primary);
     border-radius: var(--border-radius-md);
     overflow: hidden;
+
+    @include respond-max(68.75em) {
+      flex: 0 0 49rem; /* 2 карточки видны */
+    }
 
     @include respond(tab-port) {
       flex: 0 0 44rem; /* 2 карточки видны */

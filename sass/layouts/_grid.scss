@@ -33,14 +33,6 @@
   @include respond(tab-port) {
     max-width: $grid-choose-option-tab-port-width;
   }
-
-  @include respond(phone) {
-    max-width: $grid-choose-option-phone-width;
-  }
-
-  @include respond(xs-phone) {
-    max-width: $grid-choose-option-xs-phone-width;
-  }
 }
 
 .row-arrows {
@@ -53,14 +45,6 @@
 
   @include respond(tab-port) {
     max-width: $grid-arrows-tab-port-width;
-  }
-
-  @include respond(phone) {
-    padding: 0 2rem;
-  }
-
-  @include respond(xs-phone) {
-    padding: 0 1rem;
   }
 }
 

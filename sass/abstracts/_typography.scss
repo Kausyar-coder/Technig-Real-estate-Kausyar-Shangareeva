@@ -23,6 +23,11 @@ body {
     font-size: 4rem;
   }
 
+  @include respond-max(27.5em) {
+    // от 440px и нижу
+    font-size: 3rem;
+  }
+
   @include respond(xs-phone) {
     font-size: 2rem;
     font-weight: 500;
@@ -41,14 +46,12 @@ body {
   padding-bottom: $gutter-horizontal-medium;
 
   @include respond(phone) {
-    padding-bottom: $gutter-horizontal-small;
+    padding-bottom: $gutter-horizontal-medium;
     font-size: 3rem;
   }
 
   @include respond(xs-phone) {
-    font-size: 2rem;
-    white-space: wrap;
-    width: 50%;
+    font-size: 2.5rem;
   }
 }
 
@@ -71,6 +74,11 @@ body {
 
 .text-bold {
   font-weight: 500;
+
+  @include respond(phone) {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 }
 
 // ------ H3 ЭТО ПОДЗАГОЛОВОК ДЛЯ ЗАГОЛОВКА В HERO ------- //
@@ -84,6 +92,12 @@ body {
 
   @include respond(phone) {
     margin-bottom: 10rem;
+  }
+
+  @include respond-max(27.5em) {
+    // от 440px и нижу
+    font-size: 2rem;
+    margin-bottom: 6rem;
   }
 
   @include respond(xs-phone) {
